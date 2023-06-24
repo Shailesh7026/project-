@@ -1,0 +1,42 @@
+<div class="container m-5">
+    <h2>Buy Product</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+      <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <textarea class="form-control" id="address" rows="3" placeholder="Enter your address"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="payment-method" class="form-label">Payment Method</label>
+        <select class="form-select" id="payment-method">
+          <option value="">Select payment method</option>
+          <option value="credit-card">Credit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="bank-transfer">Bank Transfer</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="card-number" class="form-label">Card Number</label>
+        <input type="text" class="form-control" id="card-number" placeholder="Enter your card number">
+      </div>
+      <div class="mb-3">
+        <label for="expiration-date" class="form-label">Expiration Date</label>
+        <input type="text" class="form-control" id="expiration-date" placeholder="Enter expiration date">
+      </div>
+      <div class="mb-3">
+        <label for="cvv" class="form-label">CVV</label>
+        <input type="text" class="form-control" id="cvv" placeholder="Enter CVV">
+      </div>
+      <div class="mb-3">
+        <button routerLink="/success" class="btn btn-primary">Buy Now</button>
+      </div>
+    </form>
+  </div>
+  

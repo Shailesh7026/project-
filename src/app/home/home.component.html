@@ -1,0 +1,40 @@
+
+<app-header></app-header>
+<div class="offset-lg-2 col-lg-8">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="mb-4">Products</h3>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-lg-12" *ngFor="let category of categories">
+        <h4>{{ category }}</h4>
+        <div class="row">
+          <div class="col-lg-3" *ngFor="let product of getCategoryProducts(category)">
+            <div class="card w-100 my-2 shadow-2-strong">
+              <div class="aspect-ratio-container">
+                <img [src]="product.image" [alt]="'Product Image ' + (getCategoryProducts(category).indexOf(product) + 1)"
+                  class="aspect-ratio-content"  />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex flex-row">
+                  <h5 class="mb-1 me-1">{{ product.price }}</h5>
+                  <span class="text-danger"><s>{{ product.price }}</s></span>
+                </div>
+                <p class="card-text">{{ product.title }}</p>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#!" class="btn btn-primary shadow-0 me-1"
+                    [routerLink]="['/product-details', product.title]">View Product Details</a>
+
+              </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <br> <br> <br>
+      </div>
+    </div>
+  </div>
+  

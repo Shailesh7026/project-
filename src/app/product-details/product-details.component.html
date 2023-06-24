@@ -1,0 +1,73 @@
+
+<section class="py-5">
+  <div class="container">
+    <div class="row gx-5">
+      <aside class="col-lg-6">
+        <div class="border rounded-4 mb-3 d-flex justify-content-center">
+          <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" [href]="product.image">
+            <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" [src]="product.image" />
+          </a>
+        </div>
+       
+      </aside>
+      <main class="col-lg-6">
+        <div class="ps-lg-3">
+          <h4 class="title text-dark">
+            {{product.title}}
+          </h4>
+          <div class="d-flex flex-row my-3">
+            <div class="text-warning mb-1 me-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="ms-1">
+                4.5
+              </span>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <span class="h5">{{product.price}}</span>
+          </div>
+
+          <p>
+            "The {{product.name}} is a modern smartphone equipped with a high-quality camera that allows you to capture stunning photos and videos. With its advanced imaging technology and [Camera Features], you can take professional-grade shots with ease. Whether you're a photography enthusiast or simply love capturing moments on the go, the [Phone Name]'s camera delivers exceptional image quality and clarity. Its primary camera provides sharp and detailed images, while the secondary camera is perfect for capturing selfies and video calls. Explore the world of mobile photography with the [Phone Name] and unleash your creativity.
+          </p>
+
+          
+
+          <hr />
+
+          <div class="row mb-4">
+      
+            <div class="col-md-4 col-6 mb-3">
+              <label class="mb-2 d-block">Quantity</label>
+              <div class="input-group mb-3" style="width: 170px;">
+                <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1" data-mdb-ripple-color="dark">
+                  <i class="fa fa-minus"></i>
+                </button>
+                <input type="text" class="form-control text-center border border-secondary" placeholder="14" aria-label="Example text with button addon" aria-describedby="button-addon1" />
+                <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2" data-mdb-ripple-color="dark">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <label class="mb-2 d-block">Description</label>
+            <p>{{product.description}}</p>
+          </div>
+          <a routerLink="/buy" class="btn btn-warning shadow-0 m-3"> Buy now </a>
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+
+
+
+
+

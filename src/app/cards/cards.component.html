@@ -1,0 +1,73 @@
+<br> <br>
+<div class="offset-lg-2 col-lg-8">
+  <form class="d-flex input-group w-auto" (submit)="search(searchInput.value)">
+    <input type="search" class="form-control" placeholder="Search Product" aria-label="Search" #searchInput>
+    <button type="submit" class="btn btn-primary m-1">Search</button>
+  </form>
+  
+
+  <br><br>
+  <header class="d-sm-flex align-items-center border-bottom mb-4 pb-3">
+    <strong class="d-block py-2">{{productfound()}} Items found </strong>
+    <div class="ms-auto">
+      <select class="form-select d-inline-block w-auto border pt-1">
+        <option value="0">Best match</option>
+        <option value="1">Recommended</option>
+        <option value="2">High rated</option>
+        <option value="3">Randomly</option>
+      </select>
+    </div>
+  </header>
+
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let product of productDetails">
+      <div class="card w-100 my-2 shadow-2-strong">
+        <div class="aspect-ratio-container">
+          <img [src]="product.image" [alt]="'Product Image ' + (productDetails.indexOf(product) + 1)"
+            class="aspect-ratio-content" />
+        </div>
+        <div class="card-body d-flex flex-column">
+          <div class="d-flex flex-row">
+            <h5 class="mb-1 me-1">{{ product.price }}</h5>
+            <span class="text-danger"><s>{{ product.price }}</s></span>
+          </div>
+          <p class="card-text">{{ product.title }}</p>
+          <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+            <a href="#!" class="btn btn-primary shadow-0 me-1" [routerLink]="['/product-details', product.title]">View Product Details</a>
+            <a href="#!" class="btn btn-light border icon-hover px-2 pt-2"><i
+                class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  <nav aria-label="Page navigation example" class="d-flex justify-content-center mt-3">
+    <ul class="pagination">
+      <li class="page-item" *ngIf="currentPage > 1">
+        <a class="page-link" href="#" (click)="previousPage()">Previous</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#" (click)="nextPage()">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+<script>
+  function adjustImageSize(img) {
+    const container = img.parentElement;
+    const containerRatio = container.offsetWidth / container.offsetHeight;
+    const imageRatio = img.naturalWidth / img.naturalHeight;
+
+    if (imageRatio > containerRatio) {
+      img.style.width = '100%';
+      img.style.height = 'auto';
+    } else {
+      img.style.width = 'auto';
+      img.style.height = '100%';
+    }
+  }
+</script>
