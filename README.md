@@ -1,4 +1,5 @@
 # ECommerce
+![image](https://github.com/Shaileah7026/project-/assets/103130580/9676f0e3-b26d-40e4-a035-075c92db7b44)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
 
